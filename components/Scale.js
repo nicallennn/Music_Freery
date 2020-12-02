@@ -28,47 +28,51 @@ const Scale = (props) => {
             </Text>              
 
             {/* *********** SCALE DEGREES ************* */}
+            {props.info.degrees && 
+            <View>
             <Text style={scaleStyles.titleText}>Note/Scale Degrees</Text>
-            <Text style={scaleStyles.descriptionText}>
-              In the {props.info.title} the notes/scale degrees are given the following names:
-              {"\n\n"}              
+              <Text style={scaleStyles.descriptionText}>
+                In the {props.info.title} the notes/scale degrees are given the following names:
+                {"\n\n"}              
 
-              <Text style={{fontWeight: 'bold'}}>1st: </Text>
-              {props.info.degrees[0].degree}
-              {"\n"}
+                <Text style={{fontWeight: 'bold'}}>1st: </Text>
+                {props.info.degrees[0].degree}
+                {"\n"}
 
-              <Text style={{fontWeight: 'bold'}}>2nd: </Text>
-              {props.info.degrees[1].degree}
-              {"\n"}
+                <Text style={{fontWeight: 'bold'}}>2nd: </Text>
+                {props.info.degrees[1].degree}
+                {"\n"}
 
-              <Text style={{fontWeight: 'bold'}}>3rd: </Text>
-              {props.info.degrees[2].degree}
-              {"\n"}
+                <Text style={{fontWeight: 'bold'}}>3rd: </Text>
+                {props.info.degrees[2].degree}
+                {"\n"}
 
-              <Text style={{fontWeight: 'bold'}}>4th: </Text>
-              {props.info.degrees[3].degree}
-              {"\n"}
+                <Text style={{fontWeight: 'bold'}}>4th: </Text>
+                {props.info.degrees[3].degree}
+                {"\n"}
 
-              <Text style={{fontWeight: 'bold'}}>5th: </Text>
-              {props.info.degrees[4].degree}
-              {"\n"}
+                <Text style={{fontWeight: 'bold'}}>5th: </Text>
+                {props.info.degrees[4].degree}
+                {"\n"}
 
-              <Text style={{fontWeight: 'bold'}}>6th: </Text>
-              {props.info.degrees[5].degree}
-              {"\n"}
+                <Text style={{fontWeight: 'bold'}}>6th: </Text>
+                {props.info.degrees[5].degree}
+                {"\n"}
 
-              <Text style={{fontWeight: 'bold'}}>7th: </Text>
-              {props.info.degrees[6].degree}
-              {"\n"}
+                <Text style={{fontWeight: 'bold'}}>7th: </Text>
+                {props.info.degrees[6].degree}
+                {"\n"}
 
-              <Text style={{fontWeight: 'bold'}}>8th: </Text>
-              {props.info.degrees[7].degree}
-            </Text>
+                <Text style={{fontWeight: 'bold'}}>8th: </Text>
+                {props.info.degrees[7].degree}
+              </Text>
+            </View>
+            }
 
             {/* *********** PATTERN ************* */}
             <Text style={scaleStyles.titleText}>Pattern</Text>
             <Text style={scaleStyles.descriptionText}>
-            The scale is created using the following pattern of whole-steps (tones) and half-steps (semi-tones), starting from the root note (R):
+            {props.info.patternDescription}
             {'\n\n'}
 
             <Text style={{fontWeight: 'bold'}}>{props.info.pattern}</Text>

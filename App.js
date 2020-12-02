@@ -11,7 +11,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Scale from './components/Scale';
 import MelMinorScale from './components/MelMinorScale';
-import {majorScale, natMinorScale, harMinorScale, melMinorScale} from './data/ScalesData';
+import {
+  majorScale, 
+  natMinorScale, 
+  harMinorScale, 
+  melMinorScale, 
+  majorPentatonicScale, 
+  minorPentatonicScale
+} from './data/ScalesData';
 
 const Tab = createBottomTabNavigator();
 
@@ -47,11 +54,12 @@ const ScalesScreen = () => {
       }}>
       <ScalesStack.Screen name="Scales" component={ScalesListScreen} />
       <ScalesStack.Screen name="Scales Overview" component={ScalesOverview} />
-      <ScalesStack.Screen name="Major Scale" component={MajorScaleScreen} />
-      <ScalesStack.Screen name="Nat. Minor Scale" component={NatMinorScaleScreen} />
-      <ScalesStack.Screen name="Har. Minor Scale" component={HarMinorScaleScreen} />
-      <ScalesStack.Screen name="Mel. Minor Scale" component={MelMinorScaleScreen} />
-      <ScalesStack.Screen name="Pentatonic Scale" component={PentatonicScaleScreen} />
+      <ScalesStack.Screen name="Major" component={MajorScaleScreen} />
+      <ScalesStack.Screen name="Natural Minor" component={NatMinorScaleScreen} />
+      <ScalesStack.Screen name="Harmonic Minor" component={HarMinorScaleScreen} />
+      <ScalesStack.Screen name="Melodic Minor" component={MelMinorScaleScreen} />
+      <ScalesStack.Screen name="Major Pentatonic" component={MajorPentatonicScaleScreen} />
+      <ScalesStack.Screen name="Minor Pentatonic" component={MinorPentatonicScaleScreen} />
     </ScalesStack.Navigator>
   );
 };
@@ -70,32 +78,38 @@ const ScalesListScreen = ({navigation}) => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Major Scale')}>
+          onPress={() => navigation.navigate('Major')}>
             <Text style={styles.buttonText}> Major Scale </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Nat. Minor Scale')}>
+          onPress={() => navigation.navigate('Natural Minor')}>
             <Text style={styles.buttonText}> Natural Minor Scale </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Har. Minor Scale')}>
+          onPress={() => navigation.navigate('Harmonic Minor')}>
             <Text style={styles.buttonText}> Harmonic Minor Scale </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Mel. Minor Scale')}>
+          onPress={() => navigation.navigate('Melodic Minor')}>
             <Text style={styles.buttonText}> Melodic Minor Scale </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Pentatonic Scale')}>
-            <Text style={styles.buttonText}> Pentatonic Scale </Text>
+          onPress={() => navigation.navigate('Major Pentatonic')}>
+            <Text style={styles.buttonText}> Major Pentatonic </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Minor Pentatonic')}>
+            <Text style={styles.buttonText}> Minor Pentatonic </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -177,11 +191,15 @@ const MelMinorScaleScreen = () => {
   );
 }
 
-const PentatonicScaleScreen = () => {
+const MajorPentatonicScaleScreen = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Pentatonic Scales</Text>
-    </View>
+    <Scale info={majorPentatonicScale} />
+  );
+}
+
+const MinorPentatonicScaleScreen = () => {
+  return (
+    <Scale info={minorPentatonicScale} />
   );
 }
 
