@@ -256,6 +256,181 @@
       nextSubject: "Scales"
   }
 
+  const dorianScale = {
+    title: "Dorian scale",
+    intro_1: "The dorian mode/scale is a musical scale derived from the major scale. Like the natural minor scale is built by starting on the 6th degree of the major scale, the dorian mode is constructed by starting on the 2nd degree of the major scale.",
+    intro_2: "Without going in to depth about keys, this means you would find that if you take the 2nd degree of your key (D in the case of C major) and build the dorian scale from that note/degree, the scale will contain the same notes as your key. For C major, building the dorian scale from the 2nd degree D will give you the notes, D,E,F,G,A,B,C - the notes in the scale and key of C major.",
+    patternDescription: 'The scale is created using the following pattern of whole-steps (tones) and half-steps (semi-tones), starting from the root note (R):',
+    pattern: "R - W - H - W - W - W - H - W",
+    example: "Let’s follow this pattern to find the C dorian scale. So starting on the root note C, we make one whole-step to the right to D, a half-step to D#, a whole-step to F, a whole-step to G, a whole-step to A, a half-step to A#, finally the scale is completed with a whole-step back to our root note of C; completing one full octave.",
+    result: "This means the notes in the dorian scale of C are:",
+    resultScale: "C, D, D#, F, G, A, A#, C ",
+    positions: [
+        {scale: 'D - D# - F - G - A - A# - C',  key: 'C',  img: require('../img/scales/dorian/c.png')},
+        {scale: 'D# - E - F# - G# - A# - B - C# ', key: 'C#', img: require('../img/scales/dorian/csharp.png')},
+        {scale: 'E - F - G - A - B - C - D ',  key: 'D',  img: require('../img/scales/dorian/d.png')}, 
+        {scale: 'F - F# - G# - A# - C - C# - D#',  key: 'D#',  img: require('../img/scales/dorian/dsharp.png')}, 
+        {scale: 'F# - G - A - B - C# - D - E',  key: 'E',  img: require('../img/scales/dorian/e.png')}, 
+        {scale: 'G - G# - A# - C - D - D# - F',  key: 'F',  img: require('../img/scales/dorian/f.png')}, 
+        {scale: 'G# - A - B - C# - D# - E - F#',  key: 'F#',  img: require('../img/scales/dorian/fsharp.png')},
+        {scale: 'A - A# - C - D - E - F - G',  key: 'G',  img: require('../img/scales/dorian/g.png')}, 
+        {scale: 'A# - B - C# - D# - F - F# - G#',  key: 'G#',  img: require('../img/scales/dorian/gsharp.png')}, 
+        {scale: 'B - C - D - E - F# - G - A ',  key: 'A',  img: require('../img/scales/dorian/a.png')}, 
+        {scale: 'C - C# - D# - F - G - G# - A# ',  key: 'A#',  img: require('../img/scales/dorian/asharp.png')}, 
+        {scale: 'C# - D - E - F# - G# - A - B',  key: 'B',  img: require('../img/scales/dorian/b.png')},  
+      ],
+      exercises: [
+        {key: 'Ex 1', exercise: 'Get a pen and paper, on the top of the paper make a note of the pattern for the dorian scale (W - H - W - W - W - H - W). Starting with the root note of C, write out all the notes in the dorian scale using the noted pattern; step through each root note (C-B) and write out the notes for each dorian scale. '},
+        {key: 'Ex 2', exercise: 'On a piano/keyboard or instrument of your choice, play through the dorian scale starting on each root note, reading though the notes you made in exercise 1.'},
+        {key: 'Ex 3', exercise: 'To help you remember the pattern, pick a few random root notes and using pen and paper (and without noting the pattern), write out the notes in the dorian scale for each root note.'},
+        {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the dorian scale for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
+        {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the dorian scale, then play it an octave higher, then an octave lower, then play it backwards, then backwards an octave higher, then backwards an octave lower.'},
+      ],
+      whatNext: "Once you have mastered the dorian scale it is time to move on to the phrygian scale. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the dorian scales from each root/starting note.",
+      whatNext_2: "If you are ready to move on click the button below to navigate to the phrygian scale.",
+      nextSubject: "Phrygian Scale"
+  }
+
+  const phrygianScale = {
+    title: "Phrygian scale",
+    intro_1: "The phrygian mode/scale is a musical scale derived from the major scale. Like the dorian scale is built by starting on the 2th degree of the major scale, the phrygian mode is constructed by starting on the 3rd degree of the major scale.",
+    intro_2: "This means you would find that if you take the 3rd degree of your key (E in the case of C major) and build the phrygian scale from that note/degree, the scale will contain the same notes as your key. For C major, building the phrygian scale from the 3rd degree E will give you the notes E,F,G,A,B,C,D - the notes in the scale and key of C major.",
+    patternDescription: 'The scale is created using the following pattern of whole-steps (tones) and half-steps (semi-tones), starting from the root note (R):',
+    pattern: "R - H - W - W - W - H - W - W",
+    example: "Let’s follow this pattern to find the C phrygian scale. So starting on the root note C, we make one half-step to the right to C#, a whole-step to D#, a whole-step to F, a whole-step to G, a half-step to G#, a whole-step to A#, finally the scale is completed with a whole-step back to our root note of C; completing one full octave.",
+    result: "This means the notes in the dorian scale of C are: ",
+    resultScale: "C, C#, D#, F, G, G#, A#, C",
+    positions: [
+        {scale: 'C# - D# - F - G - G# - A# - C',  key: 'C',  img: require('../img/scales/phrygian/c.png')},
+        {scale: 'D - E - F# - G# - A - B - C# ', key: 'C#', img: require('../img/scales/phrygian/csharp.png')},
+        {scale: 'D# - F - G - A - A# - C - D ',  key: 'D',  img: require('../img/scales/phrygian/d.png')}, 
+        {scale: 'E - F# - G# - A# - B - C# - D# ',  key: 'D#',  img: require('../img/scales/phrygian/dsharp.png')}, 
+        {scale: 'F - G - A - B - C - D - E',  key: 'E',  img: require('../img/scales/phrygian/e.png')}, 
+        {scale: 'F# - G# - A# - C - C# - D# - F',  key: 'F',  img: require('../img/scales/phrygian/f.png')}, 
+        {scale: 'G - A - B - C# - D - E - F# ',  key: 'F#',  img: require('../img/scales/phrygian/fsharp.png')},
+        {scale: 'G# - A# - C - D - D# - F - G',  key: 'G',  img: require('../img/scales/phrygian/g.png')}, 
+        {scale: 'A - B - C# - D# - E - F# - G# ',  key: 'G#',  img: require('../img/scales/phrygian/gsharp.png')}, 
+        {scale: 'A# - C - D - E - F - G - A',  key: 'A',  img: require('../img/scales/phrygian/a.png')}, 
+        {scale: 'B - C# - D# - F - F# - G# - A# ',  key: 'A#',  img: require('../img/scales/phrygian/asharp.png')}, 
+        {scale: 'C - D - E - F# - G - A - B',  key: 'B',  img: require('../img/scales/phrygian/b.png')},  
+      ],
+      exercises: [
+        {key: 'Ex 1', exercise: 'Get a pen and paper, on the top of the paper make a note of the pattern for the phrygian scale (H - W - W - W - H - W - W). Starting with the root note of C, write out all the notes in the phrygian scale using the noted pattern; step through each root note (C-B) and write out the notes for each dorian scale. '},
+        {key: 'Ex 2', exercise: 'On a piano/keyboard or instrument of your choice, play through the phrygian scale starting on each root note, reading though the notes you made in exercise 1.'},
+        {key: 'Ex 3', exercise: 'To help you remember the pattern, pick a few random root notes and using pen and paper (and without noting the pattern), write out the notes in the phrygian scale for each root note.'},
+        {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the phrygian scale for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
+        {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the phrygian scale, then play it an octave higher, then an octave lower, then play it backwards, then backwards an octave higher, then backwards an octave lower.'},
+      ],
+      whatNext: "Once you have mastered the phrygian scale it is time to move on to the lydian scale. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the phrygian scales from each root/starting note.",
+      whatNext_2: "If you are ready to move on click the button below to navigate to the lydian scale.",
+      nextSubject: "Lydian Scale"
+  }
+
+  const lydianScale = {
+    title: "Lydian scale",
+    intro_1: "The lydian mode/scale is a musical scale derived from the major scale. Like the natural minor scale is built by starting on the 6th degree of the major scale, the lydian mode is constructed by starting on the 4th degree of the major sale.",
+    intro_2: "This means you would find that if you take the 4th degree of your key (F in the case of C major) and build the lydian scale from that note/degree, the scale will contain the same notes as your key. For C major, building the lydian scale from the 4th degree F will give you the notes F,G,A,B,C,D,E - the notes in the scale and key of C major.",
+    patternDescription: 'The scale is created using the following pattern of whole-steps (tones) and half-steps (semi-tones), starting from the root note (R):',
+    pattern: "R - W - W - W - H - W - W - H",
+    example: "Let’s follow this pattern to find the C lydian scale. So starting on the root note C, we make one whole-step to the right to D, a whole-step to E, a whole-step to F#, a half-step to G, a whole-step to A, a whole-step to B, finally the scale is completed with a half-step back to our root note of C; completing one full octave.",
+    result: "This means the notes in the lydian scale of C are: ",
+    resultScale: "C, D, E, F#, G, A, B, C ",
+    positions: [
+        {scale: 'D - E - F# - G - A - B - C',  key: 'C',  img: require('../img/scales/lydian/c.png')},
+        {scale: 'D# - F - G - G# - A# - C - C#', key: 'C#', img: require('../img/scales/lydian/csharp.png')},
+        {scale: 'E - F# - G# - A - B - C# - D',  key: 'D',  img: require('../img/scales/lydian/d.png')}, 
+        {scale: 'F - G - A - A# - C - D - D# ',  key: 'D#',  img: require('../img/scales/lydian/dsharp.png')}, 
+        {scale: 'F# - G# - A# - B - C# - D# - E',  key: 'E',  img: require('../img/scales/lydian/e.png')}, 
+        {scale: 'G - A - B - C - D - E - F',  key: 'F',  img: require('../img/scales/lydian/f.png')}, 
+        {scale: 'G# - A# - C - C# - D# - F - F#',  key: 'F#',  img: require('../img/scales/lydian/fsharp.png')},
+        {scale: 'A - B - C# - D - E - F# - G',  key: 'G',  img: require('../img/scales/lydian/g.png')}, 
+        {scale: 'A# - C - D - D# - F - G - G#',  key: 'G#',  img: require('../img/scales/lydian/gsharp.png')}, 
+        {scale: 'B - C# - D# - E - F# - G# - A',  key: 'A',  img: require('../img/scales/lydian/a.png')}, 
+        {scale: 'C - D - E - F - G - A - A# ',  key: 'A#',  img: require('../img/scales/lydian/asharp.png')}, 
+        {scale: 'C# - D# - F - F# - G# - A# - B',  key: 'B',  img: require('../img/scales/lydian/b.png')},  
+      ],
+      exercises: [
+        {key: 'Ex 1', exercise: 'Get a pen and paper, on the top of the paper make a note of the pattern for the dorian scale (W - H - W - W - W - H - W). Starting with the root note of C, write out all the notes in the dorian scale using the noted pattern; step through each root note (C-B) and write out the notes for each dorian scale. '},
+        {key: 'Ex 2', exercise: 'On a piano/keyboard or instrument of your choice, play through the lydian scale starting on each root note, reading though the notes you made in exercise 1.'},
+        {key: 'Ex 3', exercise: 'To help you remember the pattern, pick a few random root notes and using pen and paper (and without noting the pattern), write out the notes in the lydian scale for each root note.'},
+        {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the lydian scale for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
+        {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the lydian scale, then play it an octave higher, then an octave lower, then play it backwards, then backwards an octave higher, then backwards an octave lower.'},
+      ],
+      whatNext: "Once you have mastered the lydian scale it is time to move on to the mixolydian scale. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the lydian scales from each root/starting note.",
+      whatNext_2: "If you are ready to move on click the button below to navigate to the mixolydian scale.",
+      nextSubject: "Mixolydian Scale"
+  }
+
+  const mixolydianScale = {
+    title: "Mixolydian scale",
+    intro_1: "The mixolydian mode/scale is a musical scale derived from the major scale. Like the natural minor scale is built by starting on the 6th degree of the major scale, the mixolydian mode is constructed by starting on the 5th degree of the major sale.",
+    intro_2: "This means you would find that if you take the 5th degree of your key (G in the case of C major) and build the mixolydian scale from that note/degree, the scale will contain the same notes as your key. For C major, building the mixolydian scale from the 5th degree G will give you the notes G,A,B,C,D,E,F - the notes in the scale and key of C major.",
+    patternDescription: 'The scale is created using the following pattern of whole-steps (tones) and half-steps (semi-tones), starting from the root note (R):',
+    pattern: "R - W - W - H - W - W - H - W",
+    example: "Let’s follow this pattern to find the C mixolydian scale. So starting on the root note C, we make one whole-step to the right to D, a whole-step to E, a half-step to F, a whole-step to G, a whole-step to A, a half-step to A#, finally the scale is completed with a whole-step back to our root note of C; completing one full octave.",
+    result: "This means the notes in the mixolydian scale of C are:",
+    resultScale: "C, D, E, F, G, A, A#",
+    positions: [
+        {scale: 'D - E - F - G - A - A# - C',  key: 'C',  img: require('../img/scales/mixolydian/c.png')},
+        {scale: ' D# - F - F# - G# - A# - B - C#', key: 'C#', img: require('../img/scales/mixolydian/csharp.png')},
+        {scale: 'E - F# - G - A - B - C - D ',  key: 'D',  img: require('../img/scales/mixolydian/d.png')}, 
+        {scale: ' F - G - G# - A# - C - C# - D# ',  key: 'D#',  img: require('../img/scales/mixolydian/dsharp.png')}, 
+        {scale: ' F# - G# - A - B - C# - D - E',  key: 'E',  img: require('../img/scales/mixolydian/e.png')}, 
+        {scale: 'G - A - A# - C - D - D# - F',  key: 'F',  img: require('../img/scales/mixolydian/f.png')}, 
+        {scale: 'G# - A# - B - C# - D# - E - F#',  key: 'F#',  img: require('../img/scales/mixolydian/fsharp.png')},
+        {scale: 'A - B - C - D - E - F - G',  key: 'G',  img: require('../img/scales/mixolydian/g.png')}, 
+        {scale: 'A# - C - C# - D# - F - F# - G#',  key: 'G#',  img: require('../img/scales/mixolydian/gsharp.png')}, 
+        {scale: 'B - C# - D - E - F# - G - A',  key: 'A',  img: require('../img/scales/mixolydian/a.png')}, 
+        {scale: 'C - D - D# - F - G - G# - A# ',  key: 'A#',  img: require('../img/scales/mixolydian/asharp.png')}, 
+        {scale: 'C# - D# - E - F# - G# - A - B',  key: 'B',  img: require('../img/scales/mixolydian/b.png')},  
+      ],
+      exercises: [
+        {key: 'Ex 1', exercise: 'Get a pen and paper, on the top of the paper make a note of the pattern for the mixolydian scale (H - W - W - W - H - W - W). Starting with the root note of C, write out all the notes in the mixolydian scale using the noted pattern; step through each root note (C-B) and write out the notes for each mixolydian scale. '},
+        {key: 'Ex 2', exercise: 'On a piano/keyboard or instrument of your choice, play through the mixolydian scale starting on each root note, reading though the notes you made in exercise 1.'},
+        {key: 'Ex 3', exercise: 'To help you remember the pattern, pick a few random root notes and using pen and paper (and without noting the pattern), write out the notes in the mixolydian scale for each root note.'},
+        {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the mixolydian scale for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
+        {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the mixolydian scale, then play it an octave higher, then an octave lower, then play it backwards, then backwards an octave higher, then backwards an octave lower.'},
+      ],
+      whatNext: "Once you have mastered the mixolydian scale. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the mixolydian scales from each root/starting note.",
+      whatNext_2: "If you are ready to move on click the button below to navigate to the locrian scale.",
+      nextSubject: "Locrian Scale"
+  }
+
+  const locrianScale = {
+    title: "Locrian Scale",
+    intro_1: "The locrian mode/scale is a musical scale derived from the major scale. Like the natural minor scale is built by starting on the 6th degree of the major scale, the locrian mode is constructed by starting on the 7th degree of the major sale.",
+    intro_2: "This means you would find that if you take the 7th degree of your key (B in the case of C major) and build the locrian scale from that note/degree, the scale will contain the same notes as your key. For C major, building the locrian scale from the 7th degree B will give you the notes B,C,D,E,F,G,A - the notes in the scale and key of C major.",
+    patternDescription: 'The scale is created using the following pattern of whole-steps (tones) and half-steps (semi-tones), starting from the root note (R):',
+    pattern: "R - H - W - W - H - W - W - W",
+    example: "Let’s follow this pattern to find the C locrian scale. So starting on the root note C, we make one half-step to the right to C#, a whole-step to D#, a whole-step to F, a half-step to F#, a whole-step to G#, a whole-step to A#, finally the scale is completed with a whole-step back to our root note of C; completing one full octave.",
+    result: "This means the notes in the locrian scale of C are:",
+    resultScale: "C, C#, D#, F, F#, G#, A#, C",
+    positions: [
+        {scale: 'C# - D# - F - F# - G# - A# - C',  key: 'C',  img: require('../img/scales/nat_minor/c.png')},
+        {scale: 'D - E - F# - G - A - B - C#', key: 'C#', img: require('../img/scales/nat_minor/csharp.png')},
+        {scale: 'D# - F - G - G# - A# - C - D ',  key: 'D',  img: require('../img/scales/nat_minor/d.png')}, 
+        {scale: 'E - F# - G# - A - B - C# - D#',  key: 'D#',  img: require('../img/scales/nat_minor/dsharp.png')}, 
+        {scale: 'F - G - A - A# - C - D - E',  key: 'E',  img: require('../img/scales/nat_minor/e.png')}, 
+        {scale: 'F# - G# - A# - B - C# - D# - F',  key: 'F',  img: require('../img/scales/nat_minor/f.png')}, 
+        {scale: 'G - A - B - C - D - E - F#',  key: 'F#',  img: require('../img/scales/nat_minor/fsharp.png')},
+        {scale: 'G# - A# - C - C# - D# - F - G',  key: 'G',  img: require('../img/scales/nat_minor/g.png')}, 
+        {scale: 'A - B - C# - D - E - F# - G#',  key: 'G#',  img: require('../img/scales/nat_minor/gsharp.png')}, 
+        {scale: 'A# - C - D - D# - F - G - A',  key: 'A',  img: require('../img/scales/nat_minor/a.png')}, 
+        {scale: 'B - C# - D# - E - F# - G# - A#',  key: 'A#',  img: require('../img/scales/nat_minor/asharp.png')}, 
+        {scale: 'C - D - E - F - G - A - B',  key: 'B',  img: require('../img/scales/nat_minor/b.png')},  
+      ],
+      exercises: [
+        {key: 'Ex 1', exercise: 'Get a pen and paper, on the top of the paper make a note of the pattern for the locrian scale (H - W - W - H - W - W - W). Starting with the root note of C, write out all the notes in the locrian scale using the noted pattern; step through each root note (C-B) and write out the notes for each locrian scale.'},
+        {key: 'Ex 2', exercise: 'On a piano/keyboard or instrument of your choice, play through the locrian scale starting on each root note, reading though the notes you made in exercise 1.'},
+        {key: 'Ex 3', exercise: 'To help you remember the pattern, pick a few random root notes and using pen and paper (and without noting the pattern), write out the notes in the locrian scale for each root note.'},
+        {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the locrian scale for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
+        {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the locrian scale, then play it an octave higher, then an octave lower, then play it backwards, then backwards an octave higher, then backwards an octave lower.'},
+      ],
+      whatNext: "Once you have mastered the locrian scale you have learnt all the modal scales. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the modal scales from each root/starting note.",
+      whatNext_2: "If you are ready to move on click the button below to navigate back to the scales page.",
+      nextSubject: "Scales"
+  }
+
   const templateScale = {
     title: "Name Of scale",
     intro_1: "",
@@ -265,18 +440,6 @@
     example: "",
     result: "",
     resultScale: "",
-
-    degrees: [
-      {position: '1st', degree: 'Tonic'},
-      {position: '2nd', degree: 'Supertonic'},
-      {position: '3rd', degree: 'Mediant'},
-      {position: '4th', degree: 'Subdominant'},
-      {position: '5th', degree: 'Dominant'},
-      {position: '6th', degree: 'Submediant'},
-      {position: '7th', degree: 'Leading Tone'},
-      {position: '8th', degree: 'Tonic'},
-    ],
-
     positions: [
         {scale: '',  key: 'C',  img: require('../img/scales/nat_minor/c.png')},
         {scale: '', key: 'C#', img: require('../img/scales/nat_minor/csharp.png')},
@@ -291,7 +454,6 @@
         {scale: '',  key: 'A#',  img: require('../img/scales/nat_minor/asharp.png')}, 
         {scale: '',  key: 'B',  img: require('../img/scales/nat_minor/b.png')},  
       ],
-
       exercises: [
         {key: 'Ex 1', exercise: ''},
         {key: 'Ex 2', exercise: ''},
@@ -305,6 +467,17 @@
   }
 
 
-export {majorScale, natMinorScale, harMinorScale, melMinorScale, majorPentatonicScale, minorPentatonicScale};
+export {
+  majorScale, 
+  natMinorScale, 
+  harMinorScale, 
+  melMinorScale, 
+  majorPentatonicScale, 
+  minorPentatonicScale,
+  dorianScale,
+  phrygianScale,
+  lydianScale,
+  mixolydianScale,
+  locrianScale};
 
 

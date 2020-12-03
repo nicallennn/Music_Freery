@@ -17,7 +17,12 @@ import {
   harMinorScale, 
   melMinorScale, 
   majorPentatonicScale, 
-  minorPentatonicScale
+  minorPentatonicScale,
+  dorianScale,
+  phrygianScale,
+  lydianScale,
+  mixolydianScale,
+  locrianScale
 } from './data/ScalesData';
 
 const Tab = createBottomTabNavigator();
@@ -60,10 +65,14 @@ const ScalesScreen = () => {
       <ScalesStack.Screen name="Melodic Minor" component={MelMinorScaleScreen} />
       <ScalesStack.Screen name="Major Pentatonic" component={MajorPentatonicScaleScreen} />
       <ScalesStack.Screen name="Minor Pentatonic" component={MinorPentatonicScaleScreen} />
+      <ScalesStack.Screen name="Dorian Scale" component={DorianModeScreen} />
+      <ScalesStack.Screen name="Phrygian Scale" component={PhrygianModeScreen} />
+      <ScalesStack.Screen name="Lydian Scale" component={LydianModeScreen} />
+      <ScalesStack.Screen name="Mixolydian Scale" component={MixolydianModeScreen} />
+      <ScalesStack.Screen name="Locrian Scale" component={LocrianModeScreen} />
     </ScalesStack.Navigator>
   );
-};
-
+}
 
 const ScalesListScreen = ({navigation}) => {
   return (
@@ -114,26 +123,32 @@ const ScalesListScreen = ({navigation}) => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('7 Diatoic Modes')}>
-            <Text style={styles.buttonText}>7  Diatonic Modes </Text>
+          onPress={() => navigation.navigate('Dorian Scale')}>
+            <Text style={styles.buttonText}> Dorian Mode </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Jazz/Blues Scales')}>
-            <Text style={styles.buttonText}> Jazz and Blues Scales </Text>
+          onPress={() => navigation.navigate('Phrygian Scale')}>
+            <Text style={styles.buttonText}> Phrygian Mode </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Neapolitan Modes')}>
-            <Text style={styles.buttonText}> Neapolitan Modes </Text>
+          onPress={() => navigation.navigate('Lydian Scale')}>
+            <Text style={styles.buttonText}> Lydian Mode </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Middle Eastern Scales')}>
-            <Text style={styles.buttonText}> Middle Eastern Scale </Text>
+          onPress={() => navigation.navigate('Mixolydian Scale')}>
+            <Text style={styles.buttonText}> Mixolydian Mode </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Locrian Scale')}>
+            <Text style={styles.buttonText}> Locrian Mode </Text>
         </TouchableOpacity>
     </View>
     </ScrollView>
@@ -200,6 +215,36 @@ const MajorPentatonicScaleScreen = () => {
 const MinorPentatonicScaleScreen = () => {
   return (
     <Scale info={minorPentatonicScale} />
+  );
+}
+
+const DorianModeScreen = () => {
+  return (
+    <Scale info={dorianScale} />
+  );
+}
+
+const PhrygianModeScreen = () => {
+  return (
+    <Scale info={phrygianScale} />
+  );
+}
+
+const LydianModeScreen = () => {
+  return (
+    <Scale info={lydianScale} />
+  );
+}
+
+const MixolydianModeScreen = () => {
+  return (
+    <Scale info={mixolydianScale} />
+  );
+}
+
+const LocrianModeScreen = () => {
+  return (
+    <Scale info={locrianScale} />
   );
 }
 

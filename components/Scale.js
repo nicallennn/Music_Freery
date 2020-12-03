@@ -142,9 +142,6 @@ const Scale = (props) => {
           </View>
         }
       />
-      
-
-      
     </View>
   );
 }
