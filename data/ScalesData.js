@@ -93,7 +93,6 @@
         {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the natural minor scale for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
         {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the natural minor scale, then play it an octave higher, then an octave lower, then play it backwards, then backwards an octave higher, then backwards an octave lower.'},
       ],
-
       whatNext: "Once you have mastered the natural minor scale it is time to move on to look at the harmonic minor scale. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play the natural minor scale from each root/starting note.",
       whatNext_2: "If you are ready to move on, press the back button to go back to the scales home page or click the button below to navigate to the harmonic minor scale page.",
       nextSubject: "Harmonic Minor"
@@ -181,7 +180,7 @@
         {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the ascending and descending melodic minor scales for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
         {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the ascending and descending melodic minor scale, then play it an octave higher, then an octave lower. Finally starting at a lower octave, play through the ascending scale, then play it 1 octave higher, then 2 octaves higher; then from that point, play the descending scale, then 1 octave lower, then another octave lower.'},
       ],
-      whatNext: "You have now mastered the major scale and 3 minor scales. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the minor scales from each root/starting note.",
+      whatNext: "You have now mastered the major scale and 3 minor scales. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the scales from each root/starting note.",
       whatNext_2: "If you are ready to move on click the button below to navigate back to the main scales page.",
       nextSubject: "Scales"
   }
@@ -217,7 +216,7 @@
         {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the major pentatonic scale for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
         {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the major pentatonic scale, then play it an octave higher, then an octave lower, then play it backwards, then backwards an octave higher, then backwards an octave lower.'},
       ],
-      whatNext: "Once you have mastered the major pentatonic scale. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the minor scales from each root/starting note.",
+      whatNext: "Once you have mastered the major pentatonic scale. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the major pentatonic scales from each root/starting note.",
       whatNext_2: "If you are ready to move on click the button below to navigate to the minor pentatonic scale.",
       nextSubject: "Minor Pentatonic"
   }
@@ -252,7 +251,7 @@
         {key: 'Ex 4', exercise: 'On a piano/keyboard/instrument, play through the minor pentatonic scale for each root note without referring to your notes. For this exercise you may play them in order, starting with the root note on C. *** Note: You may find it helpful to say the pattern out loud as you play though the notes.'},
         {key: 'Ex 5', exercise: 'On a piano/keyboard/instrument, pick a root note at random and play through the minor pentatonic scale, then play it an octave higher, then an octave lower, then play it backwards, then backwards an octave higher, then backwards an octave lower.'},
       ],
-      whatNext: "You have now mastered the major and minor pentatonic scales. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the minor scales from each root/starting note.",
+      whatNext: "You have now mastered the major and minor pentatonic scales. It is highly recommended that you continue to practice these exercises - or you own exercises - regularly to help build and retain muscle memory to play each of the  minor pentatonic scales from each root/starting note.",
       whatNext_2: "If you are ready to continue exploring scales, click the button below to navigate back to the main scales page.",
       nextSubject: "Scales"
   }
