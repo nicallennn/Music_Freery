@@ -9,23 +9,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Scale from './components/Scale';
 import MenuButton from './components/MenuButton'
 
-import MelMinorScale from './components/MelMinorScale';
 import {
-  majorScale, 
-  natMinorScale, 
-  harMinorScale, 
-  melMinorScale, 
-  majorPentatonicScale, 
-  minorPentatonicScale,
-  dorianScale,
-  phrygianScale,
-  lydianScale,
-  mixolydianScale,
-  locrianScale
-} from './data/ScalesData';
+  MajorScaleScreen,
+  NatMinorScaleScreen,
+  HarMinorScaleScreen,
+  MelMinorScaleScreen,
+  MajorPentatonicScaleScreen,
+  MinorPentatonicScaleScreen,
+  DorianModeScreen,
+  PhrygianModeScreen,
+  LydianModeScreen,
+  MixolydianModeScreen,
+  LocrianModeScreen} from './screens/scales/ScaleScreens'
 
 import {scalesMenu} from './data/MenuItemsData'
 
@@ -47,6 +44,7 @@ import {
   FlatList
 } from 'react-native';
 
+/* *************** SCALES ******************** */
 const ScalesStack = createStackNavigator();
 const ScalesScreen = () => {
   return (
@@ -83,6 +81,7 @@ const ScalesListScreen = ({navigation}) => {
     <View style={{ backgroundColor: 'white', flex: 1, paddingLeft: 20, paddingRight: 20}}>  
         <FlatList
               data={scalesMenu.scales}
+              showsVerticalScrollIndicator = {false}
               renderItem={({item}) => (
                 <MenuButton info={item} />
               )} />
@@ -102,88 +101,17 @@ const ScalesOverview = ({navigation}) => {
         There are many kinds of scales used in the music of the world: the chromatic, major, and minor scales common to Western classical and popular music; the pentatonic scale popular in both folk and dance music; the microtonal scales found in the music of the Near and Far East; the modal scales also used in folk music and popular, experimental rock, and dance music; the octatonic and hexatonic scales often used as variants of the major and minor scales by modern classical and film composers; and the exotic scales commonly used by composers and music producers to create unusual atmospheres. 
         </Text>
 
-        <Text style={scaleStyles.descriptionText}>
-          Knowing these scales puts the music writer in a very good position because there is a scale for every musical purpose and situation. That knowledge also enables the writer to create music that has a clear sense of harmony and coherence. 
-        </Text>
-
         <TouchableOpacity
           style={scaleStyles.buttonRounded}
           onPress={() => navigation.navigate('Scales')}>
             <Text style={scaleStyles.buttonRoundedText}> start exploring scales </Text>
         </TouchableOpacity>
-      
-
     </View>
     </ScrollView>
   );
 }
 
-const MajorScaleScreen = ({navigation}) => {
-  return (
-    <Scale info={majorScale} />
-  );
-}
-
-const NatMinorScaleScreen = () => {
-  return (
-    <Scale info={natMinorScale} />
-  );
-}
-
-const HarMinorScaleScreen = () => {
-  return (
-    <Scale info={harMinorScale} />
-  );
-}
-
-const MelMinorScaleScreen = () => {
-  return(
-    <MelMinorScale info={melMinorScale} />
-  );
-}
-
-const MajorPentatonicScaleScreen = () => {
-  return (
-    <Scale info={majorPentatonicScale} />
-  );
-}
-
-const MinorPentatonicScaleScreen = () => {
-  return (
-    <Scale info={minorPentatonicScale} />
-  );
-}
-
-const DorianModeScreen = () => {
-  return (
-    <Scale info={dorianScale} />
-  );
-}
-
-const PhrygianModeScreen = () => {
-  return (
-    <Scale info={phrygianScale} />
-  );
-}
-
-const LydianModeScreen = () => {
-  return (
-    <Scale info={lydianScale} />
-  );
-}
-
-const MixolydianModeScreen = () => {
-  return (
-    <Scale info={mixolydianScale} />
-  );
-}
-
-const LocrianModeScreen = () => {
-  return (
-    <Scale info={locrianScale} />
-  );
-}
-
+/* *************** CHORDS ******************** */
 const ChordsScreen = () => {
   return (
   <View style={{ padding: 20, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -194,6 +122,7 @@ const ChordsScreen = () => {
     )
 };
 
+/* *************** KEYS ******************** */
 const KeysScreen = () => {
   return (
   <View style={{ padding: 20, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -203,6 +132,7 @@ const KeysScreen = () => {
     )
 };
 
+/* *************** PROGRESSIONS ******************** */
 const ProgressionsScreen = () => {
   return (
   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -210,7 +140,6 @@ const ProgressionsScreen = () => {
     </View>
     )
 };
-
 
 const App = () => {
   return (
