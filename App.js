@@ -10,6 +10,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Scale from './components/Scale';
+import MenuButton from './components/MenuButton'
+
 import MelMinorScale from './components/MelMinorScale';
 import {
   majorScale, 
@@ -24,6 +26,8 @@ import {
   mixolydianScale,
   locrianScale
 } from './data/ScalesData';
+
+import {scalesMenu} from './data/MenuItemsData'
 
 const Tab = createBottomTabNavigator();
 
@@ -76,82 +80,14 @@ const ScalesScreen = () => {
 
 const ScalesListScreen = ({navigation}) => {
   return (
-    <ScrollView style={{backgroundColor: 'white'}}>
-    <View style={{ flex: 1, paddingLeft: 20, paddingRight: 20}}>  
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Scales Overview')}>
-            <Text style={styles.buttonText}> *** Scales Overview *** </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Major')}>
-            <Text style={styles.buttonText}> Major Scale </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Natural Minor')}>
-            <Text style={styles.buttonText}> Natural Minor Scale </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Harmonic Minor')}>
-            <Text style={styles.buttonText}> Harmonic Minor Scale </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Melodic Minor')}>
-            <Text style={styles.buttonText}> Melodic Minor Scale </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Major Pentatonic')}>
-            <Text style={styles.buttonText}> Major Pentatonic </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Minor Pentatonic')}>
-            <Text style={styles.buttonText}> Minor Pentatonic </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Dorian Scale')}>
-            <Text style={styles.buttonText}> Dorian Mode </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Phrygian Scale')}>
-            <Text style={styles.buttonText}> Phrygian Mode </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Lydian Scale')}>
-            <Text style={styles.buttonText}> Lydian Mode </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Mixolydian Scale')}>
-            <Text style={styles.buttonText}> Mixolydian Mode </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('Locrian Scale')}>
-            <Text style={styles.buttonText}> Locrian Mode </Text>
-        </TouchableOpacity>
+    <View style={{ backgroundColor: 'white', flex: 1, paddingLeft: 20, paddingRight: 20}}>  
+        <FlatList
+              data={scalesMenu.scales}
+              renderItem={({item}) => (
+                <MenuButton info={item} />
+              )} />
     </View>
-    </ScrollView>
+    
   );
 }
 
