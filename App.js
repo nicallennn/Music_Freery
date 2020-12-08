@@ -24,7 +24,22 @@ import {
   MixolydianModeScreen,
   LocrianModeScreen} from './screens/scales/ScaleScreens'
 
-import {scalesMenu} from './data/MenuItemsData'
+import {
+  ChordsOverviewScreen,
+  TriadChordsScreen,
+  SeventhChordsScreen,
+  InvertedChordsScreen,
+  SuspendedChordsScreen,
+  NinthChordsScreen,
+  EleventhChordsScreen,
+  ThirteenthChordsScreen
+} from './screens/chords/ChordScreens'
+
+
+import {
+  scalesMenu,
+  chordMenu
+} from './data/MenuItemsData'
 
 const Tab = createBottomTabNavigator();
 
@@ -39,7 +54,6 @@ import {
   Button,
   Frame,
   TouchableOpacity,
-  TouchableHighlight,
   useState,
   FlatList
 } from 'react-native';
@@ -104,7 +118,7 @@ const ScalesOverview = ({navigation}) => {
         <TouchableOpacity
           style={scaleStyles.buttonRounded}
           onPress={() => navigation.navigate('Scales')}>
-            <Text style={scaleStyles.buttonRoundedText}> start exploring scales </Text>
+            <Text style={scaleStyles.buttonRoundedText}> start exploring </Text>
         </TouchableOpacity>
     </View>
     </ScrollView>
@@ -112,15 +126,46 @@ const ScalesOverview = ({navigation}) => {
 }
 
 /* *************** CHORDS ******************** */
+const ChordsStack = createStackNavigator();
 const ChordsScreen = () => {
   return (
-  <View style={{ padding: 20, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{fontWeight: 'bold', fontSize: 20}}>Chords</Text>
-      <Text>Chords overview, what are triads, 7ths, extended chords</Text>
-      <Text>Need to select scale, starting note, then show grid of notes in chords for that scale </Text>
-    </View>
+  <ChordsStack.Navigator 
+  screenOptions={{
+        headerStyle: {
+          backgroundColor: '#120022',
+        },
+        headerTintColor: 'white',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontSize: 22
+        },
+      }}>
+      <ChordsStack.Screen name="Scales" component={ChordListScreen} />
+      <ChordsStack.Screen name="Chords Overview" component={ChordsOverviewScreen} />
+      <ChordsStack.Screen name="Triads" component={TriadChordsScreen} />
+      <ChordsStack.Screen name="Seventh Chords" component={SeventhChordsScreen} />
+      <ChordsStack.Screen name="Inverted Chords" component={InvertedChordsScreen} />
+      <ChordsStack.Screen name="Suspended Chords" component={SuspendedChordsScreen} />
+      <ChordsStack.Screen name="Ninth Chords" component={NinthChordsScreen} />
+      <ChordsStack.Screen name="Eleventh Chords" component={EleventhChordsScreen} />
+      <ChordsStack.Screen name="Thirteenth Chords" component={ThirteenthChordsScreen} />      
+    </ChordsStack.Navigator>
     )
 };
+
+
+const ChordListScreen = () => {
+  return(
+    <View style={{ backgroundColor: 'white', flex: 1, paddingLeft: 20, paddingRight: 20}}>  
+        <FlatList
+              data={chordMenu.chords}
+              showsVerticalScrollIndicator = {false}
+              renderItem={({item}) => (
+                <MenuButton info={item} />
+              )} />
+    </View>
+  );
+}
 
 /* *************** KEYS ******************** */
 const KeysScreen = () => {
@@ -214,7 +259,8 @@ const scaleStyles = StyleSheet.create({
   buttonRoundedText: {
     color: 'white',
     textTransform: 'uppercase',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textAlign: 'center'
   }
 });
 

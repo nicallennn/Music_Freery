@@ -16,6 +16,7 @@ import {
   locrianScale
 } from '../../data/ScalesData';
 
+
 const MajorScaleScreen = () => {
   return (
     <Scale info={majorScale} />

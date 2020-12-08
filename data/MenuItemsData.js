@@ -15,4 +15,22 @@ const scalesMenu = {
     {name: 'Locrian Mode/Scale', link: 'Locrian Scale', key: '12'}
   ]
 }
-export {scalesMenu};
+
+const chordMenu = {
+  chords: 
+  [
+    {name: 'Chords Overview', link: 'Chords Overview', key: 'Chords Overview'},
+    {name: 'Triads', link: 'Triads', key: '2'},
+    {name: 'Seventh Chords', link: 'Seventh Chords', key: '3'},
+    {name: 'Inverted Chords', link: 'Inverted Chords', key: '4'},
+    {name: 'Suspended Chords', link: 'Suspended Chords', key: '5'},
+    {name: 'Ninth Chords', link: 'Ninth Chords', key: '6'},
+    {name: 'Eleventh Chords', link: 'Eleventh Chords', key: '7'},
+    {name: 'Thirteenth Chords', link: 'Thirteenth Chords', key: '8'},
+  ]
+}
+
+export {
+  scalesMenu,
+   chordMenu
+  };
