@@ -25,7 +25,38 @@ import {
 
 const ChordsOverviewScreen = () => {
   return (
-    <Text>overview</Text>
+    <Text>Chords Overview</Text>
+  );
+}
+
+/* *************** TRIADS ******************** */
+const TriadOverviewScreen = () => {
+  return (
+    <Text>Triad Overview</Text>
+  );
+}
+
+const MajorTriadScreen = () => {
+  return (
+    <Text>Major Triad</Text>
+  );
+}
+
+const MinorTriadScreen = () => {
+  return (
+    <Text>Major Triad</Text>
+  );
+}
+
+const AugmentedTriadScreen = () => {
+  return (
+    <Text>Augmented Triad</Text>
+  );
+}
+
+const DiminishedTriadScreen = () => {
+  return (
+    <Text>Diminished Triad</Text>
   );
 }
 
@@ -143,24 +174,52 @@ const TriadChordsScreen = () => {
   );
 }
 
-const SeventhChordsScreen = () => {
+/* *************** SEVENTHS ******************** */
+const SeventhOverviewScreen = () => {
   return (
-    <Text>7th</Text>
+    <Text>Seventh Overview</Text>
   );
 }
 
+const MajorSeventhScreen = () => {
+  return (
+    <Text>Major Seventh</Text>
+  );
+}
+
+const MinorSeventhScreen = () => {
+  return (
+    <Text>Minor Seventh</Text>
+  );
+}
+
+const AugmentedSeventhScreen = () => {
+  return (
+    <Text>Augmented Seventh</Text>
+  );
+}
+
+const DiminishedSeventhScreen = () => {
+  return (
+    <Text>Diminished Seventh</Text>
+  );
+}
+
+/* *************** INVERTED ******************** */
 const InvertedChordsScreen = () => {
   return (
     <Text>inverted</Text>
   );
 }
 
+/* *************** SUSPENDED ******************** */
 const SuspendedChordsScreen = () => {
   return (
     <Text>suspended</Text>
   );
 }
 
+/* *************** CHORDS ******************** */
 const NinthChordsScreen = () => {
   return (
     <Text>9th</Text>
@@ -225,8 +284,17 @@ const chordStyles = StyleSheet.create({
 
 export {
   ChordsOverviewScreen,
+  TriadOverviewScreen,
+  MajorTriadScreen,
+  MinorTriadScreen,
+  AugmentedTriadScreen,
+  DiminishedTriadScreen,
   TriadChordsScreen,
-  SeventhChordsScreen,
+  SeventhOverviewScreen,
+  MajorSeventhScreen,
+  MinorSeventhScreen,
+  AugmentedSeventhScreen,
+  DiminishedSeventhScreen,
   InvertedChordsScreen,
   SuspendedChordsScreen,
   NinthChordsScreen,

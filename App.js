@@ -26,8 +26,16 @@ import {
 
 import {
   ChordsOverviewScreen,
-  TriadChordsScreen,
-  SeventhChordsScreen,
+  TriadOverviewScreen,
+  MajorTriadScreen,
+  MinorTriadScreen,
+  AugmentedTriadScreen,
+  DiminishedTriadScreen,
+  SeventhOverviewScreen,
+  MajorSeventhScreen,
+  MinorSeventhScreen,
+  AugmentedSeventhScreen,
+  DiminishedSeventhScreen,
   InvertedChordsScreen,
   SuspendedChordsScreen,
   NinthChordsScreen,
@@ -37,8 +45,10 @@ import {
 
 
 import {
+  introMenu,
   scalesMenu,
-  chordMenu
+  chordMenu,
+  keysMenu
 } from './data/MenuItemsData'
 
 const Tab = createBottomTabNavigator();
@@ -125,6 +135,45 @@ const ScalesOverview = ({navigation}) => {
   );
 }
 
+/* *************** INTRO ******************** */
+const IntroStack = createStackNavigator();
+const IntroScreen = () => {
+  return (
+  <IntroStack.Navigator 
+  screenOptions={{
+        headerStyle: {
+          backgroundColor: '#120022',
+        },
+        headerTintColor: 'white',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontSize: 22
+        },
+      }}>
+      <ChordsStack.Screen name="Intro" component={IntroListScreen} />
+      <ChordsStack.Screen name="Notes" component={IntroListScreen} />
+      <ChordsStack.Screen name="Time" component={IntroListScreen} />
+      <ChordsStack.Screen name="Counting" component={IntroListScreen} />
+      <ChordsStack.Screen name="Intervals" component={IntroListScreen} />        
+    </IntroStack.Navigator>
+    )
+
+}
+
+const IntroListScreen = ({navigation}) => {
+  return (
+    <View style={{ backgroundColor: 'white', flex: 1, paddingLeft: 20, paddingRight: 20}}>  
+        <FlatList
+              data={introMenu.topics}
+              showsVerticalScrollIndicator = {false}
+              renderItem={({item}) => (
+                <MenuButton info={item} />
+              )} />
+    </View>
+    
+  );
+}
+
 /* *************** CHORDS ******************** */
 const ChordsStack = createStackNavigator();
 const ChordsScreen = () => {
@@ -142,8 +191,21 @@ const ChordsScreen = () => {
       }}>
       <ChordsStack.Screen name="Scales" component={ChordListScreen} />
       <ChordsStack.Screen name="Chords Overview" component={ChordsOverviewScreen} />
-      <ChordsStack.Screen name="Triads" component={TriadChordsScreen} />
-      <ChordsStack.Screen name="Seventh Chords" component={SeventhChordsScreen} />
+
+      <ChordsStack.Screen name="Triads" component={TriadChordsMenuScreen} />
+      <ChordsStack.Screen name="Triads Overview" component={TriadOverviewScreen} />
+      <ChordsStack.Screen name="Major Triads" component={MajorTriadScreen} />
+      <ChordsStack.Screen name="Minor Triads" component={MinorTriadScreen} />
+      <ChordsStack.Screen name="Augmented Triads" component={AugmentedTriadScreen} />
+      <ChordsStack.Screen name="Diminished Triads" component={DiminishedTriadScreen} />
+
+      <ChordsStack.Screen name="Seventh Chords" component={SeventhChordsMenuScreen} />
+      <ChordsStack.Screen name="Seventh Overview" component={SeventhOverviewScreen} />
+      <ChordsStack.Screen name="Major Sevenths" component={MajorSeventhScreen} />
+      <ChordsStack.Screen name="Minor Sevenths" component={MinorSeventhScreen} />
+      <ChordsStack.Screen name="Augmented Sevenths" component={AugmentedSeventhScreen} />
+      <ChordsStack.Screen name="Diminished Sevenths" component={DiminishedSeventhScreen} />
+
       <ChordsStack.Screen name="Inverted Chords" component={InvertedChordsScreen} />
       <ChordsStack.Screen name="Suspended Chords" component={SuspendedChordsScreen} />
       <ChordsStack.Screen name="Ninth Chords" component={NinthChordsScreen} />
@@ -167,24 +229,71 @@ const ChordListScreen = () => {
   );
 }
 
+
+const TriadChordsMenuScreen = () => {
+  return (
+    <View style={{ backgroundColor: 'white', flex: 1, paddingLeft: 20, paddingRight: 20}}>  
+        <FlatList
+              data={chordMenu.triadChords}
+              showsVerticalScrollIndicator = {false}
+              renderItem={({item}) => (
+                <MenuButton info={item} />
+              )} />
+    </View>
+  );
+}
+
+const SeventhChordsMenuScreen = () => {
+  return (
+    <View style={{ backgroundColor: 'white', flex: 1, paddingLeft: 20, paddingRight: 20}}>  
+        <FlatList
+              data={chordMenu.seventhChords}
+              showsVerticalScrollIndicator = {false}
+              renderItem={({item}) => (
+                <MenuButton info={item} />
+              )} />
+    </View>
+  );
+}
+
+
 /* *************** KEYS ******************** */
+const KeysStack = createStackNavigator();
 const KeysScreen = () => {
   return (
-  <View style={{ padding: 20, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{fontWeight: 'bold', fontSize: 20}}>Keys</Text>
-      
-    </View>
+  <ChordsStack.Navigator 
+  screenOptions={{
+        headerStyle: {
+          backgroundColor: '#120022',
+        },
+        headerTintColor: 'white',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontSize: 22
+        },
+      }}>
+      <ChordsStack.Screen name="Keys" component={KeysListScreen} />
+
+   
+    </ChordsStack.Navigator>
     )
 };
 
-/* *************** PROGRESSIONS ******************** */
-const ProgressionsScreen = () => {
-  return (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Progressions</Text>
+
+const KeysListScreen = () => {
+  return(
+    <View style={{ backgroundColor: 'white', flex: 1, paddingLeft: 20, paddingRight: 20}}>  
+        <FlatList
+              data={keysMenu.menuItems}
+              showsVerticalScrollIndicator = {false}
+              renderItem={({item}) => (
+                <MenuButton info={item} />
+              )} />
     </View>
-    )
-};
+  );
+}
+
+
 
 const App = () => {
   return (
@@ -195,10 +304,12 @@ const App = () => {
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
 
-              if (route.name === 'Scales') {
+              if (route.name === 'Intro') {
                 iconName = focused
-                  ? 'music-clef-treble'
-                  : 'music-clef-treble';
+                  ? 'music-note'
+                  : 'music-note';
+              } else if (route.name === 'Scales') {
+                iconName = focused ? 'music-clef-treble' : 'music-clef-treble';
               } else if (route.name === 'Chords') {
                 iconName = focused ? 'music-note-plus' : 'music-note-plus';
               }
@@ -208,6 +319,7 @@ const App = () => {
               else if (route.name === 'Progressions') {
                 iconName = focused ? 'playlist-music' : 'playlist-music';
               }
+              
               return <MaterialCommunityIcons name={iconName} size={size} color={color}  />;
             },
           })}
@@ -215,10 +327,10 @@ const App = () => {
             activeTintColor: '#120022',
             inactiveTintColor: 'gray',
           }}>
+          <Tab.Screen name="Intro" component={IntroScreen} />
           <Tab.Screen name="Scales" component={ScalesScreen} />
           <Tab.Screen name="Chords" component={ChordsScreen} />
           <Tab.Screen name="Keys" component={KeysScreen} />
-          <Tab.Screen name="Progressions" component={ProgressionsScreen} />
       </Tab.Navigator>
       </NavigationContainer>
     </>
